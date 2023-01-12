@@ -3,21 +3,21 @@ Simple implementation of gRPC in Golang.
 
 ## Service and RPC List 
 ```sh
-+---------------+--------------+---------------------+----------------------+
-|    SERVICE    |     RPC      |    REQUEST TYPE     |    RESPONSE TYPE     |
-+---------------+--------------+---------------------+----------------------+
-| AuthService   | Login        | LoginRequest        | LoginResponse        |
-| LaptopService | CreateLaptop | CreateLaptopRequest | CreateLaptopResponse |
-| LaptopService | SearchLaptop | SearchLaptopRequest | SearchLaptopResponse |
-| LaptopService | UploadImage  | UploadImageRequest  | UploadImageResponse  |
-| LaptopService | RateLaptop   | RateLaptopRequest   | RateLaptopResponse   |
-+---------------+--------------+---------------------+----------------------+
++---------------+--------------+---------------------+----------------------+-----------------------------+
+|    SERVICE    |     RPC      |    REQUEST TYPE     |    RESPONSE TYPE     |           RPC TYPE          |
++---------------+--------------+---------------------+----------------------+-----------------------------+
+| AuthService   | Login        | LoginRequest        | LoginResponse        | Simple RPC                  |
+| LaptopService | CreateLaptop | CreateLaptopRequest | CreateLaptopResponse | Simple RPC                  |
+| LaptopService | SearchLaptop | SearchLaptopRequest | SearchLaptopResponse | Server-Side Streaming RPC   |
+| LaptopService | UploadImage  | UploadImageRequest  | UploadImageResponse  | Client-Side Streaming RPC   |
+| LaptopService | RateLaptop   | RateLaptopRequest   | RateLaptopResponse   | Bidirectional Streaming RPC |
++---------------+--------------+---------------------+----------------------+-----------------------------+
 ```
 
 ## Quickstart 
 1. Install Module Requirement
 ```sh
-go mod tidy
+go mod download
 ```
 
 2. Generate gRPC Code 

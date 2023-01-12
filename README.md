@@ -1,5 +1,5 @@
-## Simple-Go-GRPC 
-Simple implementation GRPC in Golang.
+# Simple-Go-GRPC 
+Simple implementation of gRPC in Golang.
 
 ## Service and RPC List 
 ```sh
@@ -35,9 +35,9 @@ make server
     ```sh
     make client
     ```
-    - via CLI
-    </br>
+    - via CLI </br>
     Make sure you have installed [evans-cli](https://github.com/ktr0731/evans) first.
+    
     ```sh
     make evans-cli
     ```
